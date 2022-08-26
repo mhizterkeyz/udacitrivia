@@ -80,9 +80,9 @@ Errors are returned as JSON objects in the following format:
 
 ```json
 {
-    "success": False,
-    "error": 404,
-    "message": "not found"
+  "success": false,
+  "error": 404,
+  "message": "not found"
 }
 ```
 
