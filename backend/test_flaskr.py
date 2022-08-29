@@ -138,7 +138,7 @@ class TriviaTestCase(unittest.TestCase):
 
     def test_get_quiz_question(self):
         previous_questions = [5, 9, 12]
-        res = self.client().post('/quizzes', json={ 'previous_questions': previous_questions, 'quiz_category': { 'id': 4 } })
+        res = self.client().post('/quizzes', json={ 'previous_questions': previous_questions, 'quiz_category': { 'id': 0 } })
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
