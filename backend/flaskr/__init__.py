@@ -117,7 +117,8 @@ def create_app(test_config=None):
             selection = Question.query.filter(~Question.id.in_(previous_questions))
             if 'id' in quiz_category:
                 category_id = quiz_category['id']
-                selection = selection.filter(Question.category == category_id)
+                if category_id:
+                    selection = selection.filter(Question.category == category_id)
 
             selection = selection.all()
             question = None
